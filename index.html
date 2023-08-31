@@ -47,6 +47,7 @@
         <div class="input-group mb-3">
           <input
             v-model.trim="inputMessage"
+            @keyup.enter="addTodo()"
             type="text"
             class="form-control"
             :placeholder="placeHolderMessage"
