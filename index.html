@@ -63,6 +63,7 @@
             <template v-for="(text, index) in list">
               <li
                 v-if="list[index].done"
+                @click="change(index)"
                 class="todo-element text-decoration-line-through"
               >
                 {{ list[index].text }}
@@ -70,7 +71,11 @@
                   <i class="fa-solid fa-circle-xmark"></i>
                 </div>
               </li>
-              <li v-else="!list[index].done" class="todo-element">
+              <li
+                v-else="!list[index].done"
+                @click="change(index)"
+                class="todo-element"
+              >
                 {{ list[index].text }}
                 <div @click="remove(index)" class="erase-btn clearfix">
                   <i class="fa-solid fa-circle-xmark"></i>

@@ -38,5 +38,12 @@ createApp({
       this.list.push(newElement);
       this.inputMessage = "";
     },
+    change(index) {
+      if (!this.list[index].done) {
+        this.list[index].done = true;
+      } else {
+        this.list[index].done = false;
+      }
+    },
   },
 }).mount("#app");
