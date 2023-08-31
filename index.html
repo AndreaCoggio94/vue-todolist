@@ -44,11 +44,22 @@
           <h1>To do list</h1>
         </div>
 
-        <input v-model="newElement.text" :placeholder="inputMessage" />
-        <button @click="addTodo()">Add to list</button>
+        <div class="input-group mb-3">
+          <input
+            v-model="newElement.text"
+            type="text"
+            class="form-control"
+            :placeholder="inputMessage"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <span @click="addTodo()" class="btn btn-success" id="basic-addon2"
+            >Add to list</span
+          >
+        </div>
 
         <div>
-          <ul class="todo-list">
+          <ul class="card todo-list">
             <template v-for="(text, index) in list">
               <li
                 v-if="list[index].done"
