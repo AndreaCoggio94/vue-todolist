@@ -43,6 +43,10 @@
         <div class="text-center">
           <h1>To do list</h1>
         </div>
+
+        <input v-model="newElement.text" :placeholder="inputMessage" />
+        <button @click="addTodo()">Add to list</button>
+
         <div>
           <ul class="todo-list">
             <template v-for="(text, index) in list">
