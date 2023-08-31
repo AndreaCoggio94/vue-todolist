@@ -44,6 +44,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  font-size: 1.25rem;
 }
 
 /* to do list */
@@ -52,4 +53,9 @@ ul {
   background-color: var(--light-blue);
   padding: 1rem;
   margin: 0.25rem;
+}
+
+.erase-btn {
+  float: right;
+  color: var(--darker-red);
 }

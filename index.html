@@ -50,9 +50,15 @@
               class="todo-element text-decoration-line-through"
             >
               {{ list[index].text }}
+              <div class="erase-btn clearfix">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </div>
             </li>
             <li v-else="!list[index].done" class="todo-element">
               {{ list[index].text }}
+              <div class="erase-btn clearfix">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </div>
             </li>
           </ul>
         </div>
