@@ -3,10 +3,6 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      newElement: {
-        text: "",
-        done: false,
-      },
       list: [
         {
           text: "make a list",
@@ -34,8 +30,13 @@ createApp({
       this.list.splice(index, 1);
     },
     addTodo() {
-      this.newElement.text = this.inputMessage;
-      this.list.push(this.newElement);
+      const newElement = {
+        text: this.inputMessage,
+        done: false,
+      };
+
+      this.list.push(newElement);
+      this.inputMessage = "";
     },
   },
 }).mount("#app");
