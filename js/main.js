@@ -25,7 +25,8 @@ createApp({
           done: false,
         },
       ],
-      inputMessage: "Add a list item",
+      placeHolderMessage: "Add a list item",
+      inputMessage: "",
     };
   },
   methods: {
@@ -33,6 +34,7 @@ createApp({
       this.list.splice(index, 1);
     },
     addTodo() {
+      this.newElement.text = this.inputMessage;
       this.list.push(this.newElement);
     },
   },
