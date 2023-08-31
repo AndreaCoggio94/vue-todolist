@@ -44,22 +44,24 @@
           <h1>To do list</h1>
         </div>
         <div>
-          <ul v-for="(text, index) in list" class="todo-list">
-            <li
-              v-if="list[index].done"
-              class="todo-element text-decoration-line-through"
-            >
-              {{ list[index].text }}
-              <div @click="remove(index)" class="erase-btn clearfix">
-                <i class="fa-solid fa-circle-xmark"></i>
-              </div>
-            </li>
-            <li v-else="!list[index].done" class="todo-element">
-              {{ list[index].text }}
-              <div @click="remove(index)" class="erase-btn clearfix">
-                <i class="fa-solid fa-circle-xmark"></i>
-              </div>
-            </li>
+          <ul class="todo-list">
+            <template v-for="(text, index) in list">
+              <li
+                v-if="list[index].done"
+                class="todo-element text-decoration-line-through"
+              >
+                {{ list[index].text }}
+                <div @click="remove(index)" class="erase-btn clearfix">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+              </li>
+              <li v-else="!list[index].done" class="todo-element">
+                {{ list[index].text }}
+                <div @click="remove(index)" class="erase-btn clearfix">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+              </li>
+            </template>
           </ul>
         </div>
       </div>

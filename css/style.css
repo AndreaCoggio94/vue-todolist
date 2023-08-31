@@ -49,6 +49,10 @@ ul {
 
 /* to do list */
 
+.todo-list {
+  border: 1px solid var(--black);
+}
+
 .todo-element {
   background-color: var(--light-blue);
   padding: 1rem;
