@@ -23,4 +23,9 @@ createApp({
       ],
     };
   },
+  methods: {
+    remove(index) {
+      console.log(this.list[index]);
+    },
+  },
 }).mount("#app");
