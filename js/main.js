@@ -25,7 +25,7 @@ createApp({
   },
   methods: {
     remove(index) {
-      console.log(this.list[index]);
+      this.list.splice(index, 1);
     },
   },
 }).mount("#app");
