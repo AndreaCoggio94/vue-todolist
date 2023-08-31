@@ -31,3 +31,25 @@
   margin: 0;
   padding: 0;
 }
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* * global */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* to do list */
+
+.todo-element {
+  background-color: var(--light-blue);
+  padding: 1rem;
+  margin: 0.25rem;
+}
