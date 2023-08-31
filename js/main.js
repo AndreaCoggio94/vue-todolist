@@ -6,11 +6,11 @@ createApp({
       list: [
         {
           text: "make a list",
-          done: false,
+          done: true,
         },
         {
           text: "print the list",
-          done: false,
+          done: true,
         },
         {
           text: "add removal of the list",

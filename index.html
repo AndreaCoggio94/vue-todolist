@@ -39,8 +39,11 @@
   </head>
   <body>
     <div id="app">
-      <ul>
-        <li v-for="(text, index) in list">{{ list[index].text }}</li>
+      <ul v-for="(text, index) in list">
+        <li v-if="list[index].done" class="text-decoration-line-through">
+          {{ list[index].text }}
+        </li>
+        <li v-else="!list[index].done">{{ list[index].text }}</li>
       </ul>
     </div>
   </body>
